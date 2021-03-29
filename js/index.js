@@ -9,8 +9,8 @@ var nomeUtente = prompt('Inserisci il tuo nome');
 console.log(nomeUtente);
 
 //INVERTIRE NOME
-var nomeInversa = caratteriInversi(nomeUtente);
-console.log(nomeInversa);
+var nomeInverso = caratteriInversi(nomeUtente);
+console.log(nomeInverso);
 
 //FUNZIONE PER INVERTIRE I CARATTERI
 function caratteriInversi(nome) {
@@ -29,7 +29,13 @@ function caratteriInversi(nome) {
    return inverso;
 }
 
+//CONTROLLO NOME PALINDROMO
+if (nomeUtente == nomeInverso) {
+    console.log('Il nome ' + nomeUtente + ' è  Palindromo');
+}else {
+    console.log('Il nome ' + nomeUtente + ' non è  Palindromo');
 
+}
 
 
 
