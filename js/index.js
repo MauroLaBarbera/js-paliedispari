@@ -52,7 +52,7 @@ if (nomeUtente == nomeInverso) {
 
 //INSERIRE PARI O DISPARI
 var sceltaUtente = prompt('Inserisci \npari o \ndispari').toLowerCase().trim();
-console.log(sceltaUtente);
+console.log('Hai scelto', sceltaUtente);
 
 //INSERIRE NUMERO DA 1 A 5
 var numeroUtente = parseInt( prompt('Adesso, inserisci un numero da 1 a 5'));
@@ -60,19 +60,22 @@ console.log(numeroUtente);
 
 //CREAZIONE NUMERI RANDOM
 var numeroCPU = numRandom();
-console.log(numeroCPU);
+console.log('Il Computer ha scelto: ', numeroCPU);
 
 //SOMMA NUMERO UTENTE + CPU
 var somma = numeroUtente + numeroCPU;
-console.log(somma);
+console.log('La somma dei vostri numeri è: ' , somma);
 
 var risultato = pariDispari(somma);
-console.log(risultato);
+console.log('Quindi il numero è: ', risultato);
 
-switch (sceltaUtente) {
-    case
+if ( (sceltaUtente === 'pari') && (risultato === 'pari') ) {
+    console.log('Bravo, hai vinto!! Perché la somma del tuo numero e quello del Computer (' + somma + ') è un numero pari!');
+} else if ( (sceltaUtente === 'dispari') && (risultato === 'dispari') ) {
+    console.log('Bravo, hai vinto!! Perché la somma del tuo numero e quello del Computer (' + somma + ') è un numero dispari!');
+} else {
+    console.log('Mi dispiace... Hai perso =(');
 }
-
 
 
 /**
