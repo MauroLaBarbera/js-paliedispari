@@ -4,7 +4,7 @@
  * Creare una funzione per capire se la parola inserita è palindroma
 */
 
-/*//INSERIRE NOME UTENTE
+//INSERIRE NOME UTENTE
 var nomeUtente = prompt('Inserisci il tuo nome');
 console.log(nomeUtente);
 
@@ -36,7 +36,8 @@ if (nomeUtente == nomeInverso) {
     console.log('Il nome ' + nomeUtente + ' non è  Palindromo');
 
 }
-*/
+
+
 
 
 
@@ -50,54 +51,61 @@ if (nomeUtente == nomeInverso) {
  * Dichiariamo chi ha vinto.
  */
 
-//INSERIRE PARI O DISPARI
-var sceltaUtente = prompt('Inserisci \npari o \ndispari').toLowerCase().trim();
-console.log('Hai scelto', sceltaUtente);
-
-//INSERIRE NUMERO DA 1 A 5
-var numeroUtente = parseInt( prompt('Adesso, inserisci un numero da 1 a 5'));
-console.log(numeroUtente);
-
-//CREAZIONE NUMERI RANDOM
-var numeroCPU = numRandom();
-console.log('Il Computer ha scelto: ', numeroCPU);
-
-//SOMMA NUMERO UTENTE + CPU
-var somma = numeroUtente + numeroCPU;
-console.log('La somma dei vostri numeri è: ' , somma);
-
-var risultato = pariDispari(somma);
-console.log('Quindi il numero è: ', risultato);
-
-if ( (sceltaUtente === 'pari') && (risultato === 'pari') ) {
-    console.log('Bravo, hai vinto!! Perché la somma del tuo numero e quello del Computer (' + somma + ') è un numero pari!');
-} else if ( (sceltaUtente === 'dispari') && (risultato === 'dispari') ) {
-    console.log('Bravo, hai vinto!! Perché la somma del tuo numero e quello del Computer (' + somma + ') è un numero dispari!');
-} else {
-    console.log('Mi dispiace... Hai perso =(');
-}
+// //INSERIRE PARI O DISPARI
+// do {
+//     var sceltaUtente = prompt('Inserisci pari o dispari'); 
+// } while (sceltaUtente != 'pari' && sceltaUtente !='dispari');
+// console.log('Hai scelto ' , sceltaUtente);
 
 
-/**
- * FUNZIONE NUMERI RANDOM
- * @returns un numero random
- */
-function numRandom() {
-    var risultato = Math.floor (Math.random() * 5 + 1);
-    return risultato;
-}
+// //INSERIRE NUMERO DA 1 A 5
+// do {
+//     var numeroUtente = parseInt( prompt('Adesso, inserisci un numero da 1 a 5'));
+// } while ( isNaN(numeroUtente) || (numeroUtente > 5 || numeroUtente < 1 )); 
+// console.log('Il tuo numero è ' , numeroUtente);
+
+// //CREAZIONE NUMERI RANDOM
+// var numeroCPU = numRandom();
+// console.log('Il Computer ha scelto: ', numeroCPU);
+
+// //SOMMA NUMERO UTENTE + CPU
+// var somma = numeroUtente + numeroCPU;
+// console.log('La somma dei vostri numeri è: ' , somma);
+
+// var risultato = pariDispari(somma);
+// console.log('Quindi il numero è: ', risultato);
+
+
+// //DICHIARAZIONE VINCITORE
+// if ( (sceltaUtente === 'pari') && (risultato === 'pari') ) {
+//     console.log('Bravo, hai vinto!! Perché la somma del tuo numero e quello del Computer (' + somma + ') è un numero pari!');
+// } else if ( (sceltaUtente === 'dispari') && (risultato === 'dispari') ) {
+//     console.log('Bravo, hai vinto!! Perché la somma del tuo numero e quello del Computer (' + somma + ') è un numero dispari!');
+// } else {
+//     console.log('Mi dispiace... Hai perso =(');
+// }
+
+
+// /**
+//  * FUNZIONE NUMERI RANDOM
+//  * @returns un numero random
+//  */
+// function numRandom() {
+//     var risultato = Math.floor (Math.random() * 5 + 1);
+//     return risultato;
+// }
 
 
 
-/**
- * FUNZIONE PARI O DISPARI
- * @param {*} num numero da analizzare
- * @returns pari o dispari
- */
-function pariDispari (num) {
-    if (num % 2 === 0) {
-        return 'pari';
-    }
+// /**
+//  * FUNZIONE PARI O DISPARI
+//  * @param {*} num numero da analizzare
+//  * @returns pari o dispari
+//  */
+// function pariDispari (num) {
+//     if (num % 2 === 0) {
+//         return 'pari';
+//     }
 
-    return 'dispari';
-}
+//     return 'dispari';
+// }
